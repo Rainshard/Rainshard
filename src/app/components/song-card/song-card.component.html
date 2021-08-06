@@ -1,0 +1,8 @@
+<div class="song-card" (click)="onClick()">
+  <div class="title-area">
+    <img class="play-icon" src="assets/icons/play.svg">
+    <div class="song-title">{{ song.name }}</div>
+    <audio [src]="song.audioPath" (ended)="onEnded()"></audio>
+  </div>
+  <div class="song-desc">{{ song.description }}</div>
+</div>

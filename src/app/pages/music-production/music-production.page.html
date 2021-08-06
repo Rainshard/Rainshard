@@ -1,0 +1,8 @@
+<div>
+  <app-song-card-frame 
+    [songs]="songs" 
+    (songClicked)="onClickSong($event)"
+    (songEnded)="onEndedSong($event)">
+  </app-song-card-frame>
+  <!-- DISABLED for now <app-video></app-video>     -->
+</div>

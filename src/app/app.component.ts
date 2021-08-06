@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'rainshard';
+  selectedPage;
+
+  constructor() {
+    this.selectedPage = 'music';
+  }
+
+  onNavbarItemSelected(newPage: string) {
+    if(newPage === this.selectedPage) return;
+    this.selectedPage = newPage;
+  }
 }

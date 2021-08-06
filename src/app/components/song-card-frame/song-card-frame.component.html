@@ -1,0 +1,11 @@
+<div class="loop-tracks-container">
+  <div class="loop-title">Looping Madness</div>
+  <div id="song-card-container" class="song-card-container">
+    <app-song-card 
+      *ngFor="let song of songs" 
+      [song]="song" 
+      (clicked)="onClickSong($event)"
+      (ended)="onEndedSong($event)">
+    </app-song-card>
+  </div>
+</div>

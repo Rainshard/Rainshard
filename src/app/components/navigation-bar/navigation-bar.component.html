@@ -1,0 +1,17 @@
+<div class="nav">
+  <ul>
+    <li 
+      [class.selected]="selected === 'music'" 
+      (click)="onSelect('music')">
+      Music Production</li>
+    <li 
+      [class.selected]="selected === 'software'" 
+      (click)="onSelect('software')">
+      Software Development</li>
+    <li 
+      [class.selected]="selected === 'about'" 
+      (click)="onSelect('about')">
+      About</li>
+  </ul>
+</div>
+

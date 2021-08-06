@@ -1,0 +1,28 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+li {
+  float:left;
+  display: block;
+  color: var(--light-color);
+  text-align: center;
+  padding:8px 12px;
+  text-decoration: none; 
+}
+
+li:hover {
+  background-color:var(--light-color);
+  color:var(--main-color);
+  opacity: 0.5;
+} 
+
+.selected {
+  background-color:var(--light-color);
+  color:var(--main-color);
+} 

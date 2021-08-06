@@ -1,0 +1,22 @@
+.song-card-container {
+  background-color: var(--accent-color);
+  margin:8px;
+  border-radius: 16px 4px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  display:inline-block;
+}
+
+.loop-tracks-container {
+  background-color: var(--main-color);
+  border-radius: 16px 4px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.loop-title {
+  font-style:bold;
+  color:var(--light-color);
+  margin-left: 16px;
+  margin-top: 8px;
+}
