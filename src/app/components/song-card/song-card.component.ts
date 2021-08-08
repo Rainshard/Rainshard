@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, ElementRef, Input, Output, ViewChild } from '@angular/core';
 import { SongModel } from 'src/app/models/song-model';
 
 @Component({
@@ -8,14 +8,27 @@ import { SongModel } from 'src/app/models/song-model';
 })
 export class SongCardComponent {
   @Input() song: SongModel;
-  @Output() clicked = new EventEmitter<SongModel>();
-  @Output() ended = new EventEmitter<SongModel>();
+  @Output() clicked = new EventEmitter<SongCardComponent>();
+  @Output() ended = new EventEmitter<SongCardComponent>();
+  @ViewChild('audiotrack') audiotrack : ElementRef;
+  isPlaying = false;
 
   onClick() {
-    this.clicked.emit(this.song);
+    this.clicked.emit(this);
   }
 
   onEnded() {
-    this.ended.emit(this.song);
+    this.ended.emit(this);
+  }
+
+  stopSong() {
+    this.audiotrack.nativeElement.pause();
+    this.audiotrack.nativeElement.currentTime = 0;
+    this.isPlaying = false;
+  }
+
+  playSong() {
+    this.isPlaying = true;
+    this.audiotrack.nativeElement.play();
   }
 }

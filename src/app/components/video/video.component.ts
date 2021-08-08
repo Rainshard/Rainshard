@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-video',
-  template: '<iframe class="video" src="https://www.youtube.com/embed/xyNyEg3aEWU"></iframe>',
+  template: '<div class="video-container"><iframe class="video" src="https://www.youtube.com/embed/xyNyEg3aEWU"></iframe></div>',
   styles: [
     `
     .video-container {
+      margin-left: 8px;
       background-color: var(--main-color);
       width: 440px;
       height: 334px;

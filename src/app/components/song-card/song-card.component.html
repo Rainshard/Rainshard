@@ -1,8 +1,8 @@
-<div class="song-card" (click)="onClick()">
+<div class="song-card" [ngClass] = "{'song-card-playing' : isPlaying}" (click)="onClick()">
   <div class="title-area">
-    <img class="play-icon" src="assets/icons/play.svg">
+    <img class="play-icon" [src]="isPlaying ? 'assets/icons/sound.gif' : 'assets/icons/play.svg'">
     <div class="song-title">{{ song.name }}</div>
-    <audio [src]="song.audioPath" (ended)="onEnded()"></audio>
+    <audio #audiotrack [src]="song.audioPath" (ended)="onEnded()"></audio>
   </div>
-  <div class="song-desc">{{ song.description }}</div>
+  <div class="song-desc" [ngClass] = "{'song-desc-playing' : isPlaying}">{{ song.description }}</div>
 </div>

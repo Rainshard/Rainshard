@@ -4,8 +4,8 @@
     <app-song-card 
       *ngFor="let song of songs" 
       [song]="song" 
-      (clicked)="onClickSong($event)"
-      (ended)="onEndedSong($event)">
+      (clicked)="onClickSongCard($event)"
+      (ended)="onEndedSongCard($event)">
     </app-song-card>
   </div>
 </div>
